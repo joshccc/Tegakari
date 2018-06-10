@@ -1,0 +1,433 @@
+Buildfile: build.xml
+
+-pre-init:
+
+-init-private:
+
+-init-user:
+
+-init-project:
+
+-init-macrodef-property:
+
+-do-init:
+
+-post-init:
+
+-init-check:
+
+-init-ap-cmdline-properties:
+
+-init-macrodef-javac-with-processors:
+
+-init-macrodef-javac-without-processors:
+
+-init-macrodef-javac:
+
+-init-macrodef-test-impl:
+
+-init-macrodef-junit-init:
+
+-init-macrodef-junit-single:
+
+-init-test-properties:
+
+-init-macrodef-junit-batch:
+
+-init-macrodef-junit:
+
+-init-macrodef-junit-impl:
+
+-init-macrodef-testng:
+
+-init-macrodef-testng-impl:
+
+-init-macrodef-test:
+
+-init-macrodef-junit-debug:
+
+-init-macrodef-junit-debug-batch:
+
+-init-macrodef-junit-debug-impl:
+
+-init-macrodef-test-debug-junit:
+
+-init-macrodef-testng-debug:
+
+-init-macrodef-testng-debug-impl:
+
+-init-macrodef-test-debug-testng:
+
+-init-macrodef-test-debug:
+
+-init-debug-args:
+
+-init-macrodef-nbjpda:
+
+-init-macrodef-debug:
+
+-init-macrodef-java:
+
+-init-presetdef-jar:
+
+-init-ap-cmdline-supported:
+
+-init-ap-cmdline:
+
+init:
+
+-deps-jar-init:
+   [delete] Deleting: /home/jchoi30/NetBeansProjects/Tegakari/build/built-jar.properties
+
+deps-jar:
+
+-warn-already-built-jar:
+
+-check-automatic-build:
+
+-clean-after-automatic-build:
+
+-verify-automatic-build:
+
+-pre-pre-compile:
+
+-pre-compile:
+
+-copy-persistence-xml:
+
+-compile-depend:
+
+-do-compile:
+
+-post-compile:
+
+compile:
+
+-pre-pre-compile-test:
+
+-pre-compile-test:
+
+-compile-test-depend:
+
+-do-compile-test:
+    [javac] Compiling 9 source files to /home/jchoi30/NetBeansProjects/Tegakari/build/test/classes
+     [copy] Copying 174 files to /home/jchoi30/NetBeansProjects/Tegakari/build/test/classes
+
+-post-compile-test:
+
+compile-test:
+
+-pre-test-run:
+    [mkdir] Created dir: /home/jchoi30/NetBeansProjects/Tegakari/build/test/results
+
+-do-test-run:
+    [junit] Running GUI_test.AccusationConfirmTest
+    [junit] Testsuite: GUI_test.AccusationConfirmTest
+    [junit] testOkButtons
+    [junit] testCancelButton
+    [junit] testLables
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.087 sec
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.087 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] testOkButtons
+    [junit] testCancelButton
+    [junit] testLables
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testOkButtons took 0.066 sec
+    [junit] Testcase: testCancelButton took 0.002 sec
+    [junit] Testcase: testLables took 0.003 sec
+    [junit] Running GUI_test.AccusationDialogTest
+    [junit] Testsuite: GUI_test.AccusationDialogTest
+    [junit] testSuspects
+    [junit] testDestinations
+    [junit] testVehicles
+    [junit] testSubmitButtons
+    [junit] testCancelButton
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.108 sec
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.108 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] testSuspects
+    [junit] testDestinations
+    [junit] testVehicles
+    [junit] testSubmitButtons
+    [junit] testCancelButton
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testSuspects took 0.065 sec
+    [junit] Testcase: testDestinations took 0.014 sec
+    [junit] Testcase: testVehicles took 0.007 sec
+    [junit] Testcase: testSubmitButtons took 0.003 sec
+    [junit] Testcase: testCancelButton took 0.001 sec
+    [junit] Running GUI_test.AccusationResultTest
+    [junit] Testsuite: GUI_test.AccusationResultTest
+    [junit] testWrongOthers
+    [junit] testCorrectSelf
+    [junit] testCorrectOthers
+    [junit] testOkButtons
+    [junit] testWrongSelf
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.178 sec
+    [junit] Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 0.178 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] testWrongOthers
+    [junit] testCorrectSelf
+    [junit] testCorrectOthers
+    [junit] testOkButtons
+    [junit] testWrongSelf
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testWrongOthers took 0.11 sec
+    [junit] Testcase: testCorrectSelf took 0.011 sec
+    [junit] Testcase: testCorrectOthers took 0.006 sec
+    [junit] Testcase: testOkButtons took 0.011 sec
+    [junit] Testcase: testWrongSelf took 0.007 sec
+    [junit] Running GUI_test.ChooseThemeDialogTest
+    [junit] Testsuite: GUI_test.ChooseThemeDialogTest
+    [junit] testButtons
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.095 sec
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.095 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] testButtons
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testButtons took 0.087 sec
+    [junit] Running GUI_test.CreateRobotDialogTest
+    [junit] Testsuite: GUI_test.CreateRobotDialogTest
+    [junit] testButtons
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.069 sec
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.069 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] testButtons
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testButtons took 0.059 sec
+    [junit] Running GUI_test.DisproveTest
+    [junit] Testsuite: GUI_test.DisproveTest
+    [junit] testButtonsDestinations
+    [junit] testButtonsSuspect
+    [junit] testButtonsVehicle
+    [junit] testButtonsALL
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.209 sec
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.209 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] testButtonsDestinations
+    [junit] testButtonsSuspect
+    [junit] testButtonsVehicle
+    [junit] testButtonsALL
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testButtonsDestinations took 0.159 sec
+    [junit] Testcase: testButtonsSuspect took 0.006 sec
+    [junit] Testcase: testButtonsVehicle took 0.006 sec
+    [junit] Testcase: testButtonsALL took 0.01 sec
+    [junit] Running GUI_test.HelpDialogTest
+    [junit] Testsuite: GUI_test.HelpDialogTest
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.066 sec
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.066 sec
+    [junit] 
+    [junit] Testcase: testButton took 0.056 sec
+    [junit] Running GUI_test.LobbyGUITest
+    [junit] Testsuite: GUI_test.LobbyGUITest
+    [junit] testPlayer1Lobby
+    [junit] testNotPlayer1Lobby
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.098 sec
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.098 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] testPlayer1Lobby
+    [junit] testNotPlayer1Lobby
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testPlayer1Lobby took 0.081 sec
+    [junit] Testcase: testNotPlayer1Lobby took 0.005 sec
+    [junit] Running GUI_test.MainWindowTest
+    [junit] Testsuite: GUI_test.MainWindowTest
+    [junit] testPlayButton
+    [junit] testText
+    [junit] testHelpButton
+    [junit] testOpenHelp
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.559 sec
+    [junit] Tests run: 4, Failures: 0, Errors: 0, Time elapsed: 0.559 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] testPlayButton
+    [junit] testText
+    [junit] testHelpButton
+    [junit] testOpenHelp
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testPlayButton took 0.423 sec
+    [junit] Testcase: testText took 0.027 sec
+    [junit] Testcase: testHelpButton took 0.022 sec
+    [junit] Testcase: testOpenHelp took 0.053 sec
+    [junit] Running GUI_test.NoOneDisproveDialogTest
+    [junit] Testsuite: GUI_test.NoOneDisproveDialogTest
+    [junit] testNoButton
+    [junit] testText
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.171 sec
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.171 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] testNoButton
+    [junit] testText
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testOKButton took 0.151 sec
+    [junit] Testcase: testText took 0.007 sec
+    [junit] Running GUI_test.NoWinnerDialogTest
+    [junit] Testsuite: GUI_test.NoWinnerDialogTest
+    [junit] testText
+    [junit] testOKButton
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.266 sec
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.266 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] testText
+    [junit] testOKButton
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testText took 0.237 sec
+    [junit] Testcase: testOKButton took 0.015 sec
+    [junit] Running GUI_test.NotePadDialogTest
+    [junit] Testsuite: GUI_test.NotePadDialogTest
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 7.817 sec
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 7.817 sec
+    [junit] 
+    [junit] Testcase: testCheckBoxes took 7.659 sec
+    [junit] Testcase: testText took 0.142 sec
+    [junit] Running GUI_test.PrivateTipFromDialogTest
+    [junit] Testsuite: GUI_test.PrivateTipFromDialogTest
+    [junit] disableAll
+    [junit] setEnabledOK
+    [junit] testText
+    [junit] Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
+    [junit] Tests run: 10, Failures: 0, Errors: 0, Time elapsed: 0.766 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] disableAll
+    [junit] setEnabledOK
+    [junit] testText
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testDisableCards took 0.486 sec
+    [junit] Testcase: testSetEnabledOK took 0.033 sec
+    [junit] Testcase: testOKButton took 0.041 sec
+    [junit] Testcase: testcardButton6 took 0.028 sec
+    [junit] Testcase: testcardButton5 took 0.026 sec
+    [junit] Testcase: testText took 0.028 sec
+    [junit] Testcase: testcardButton4 took 0.024 sec
+    [junit] Testcase: testcardButton3 took 0.024 sec
+    [junit] Testcase: testcardButton2 took 0.023 sec
+    [junit] Testcase: testcardButton1 took 0.022 sec
+    [junit] Running GUI_test.PrivateTipResponseDialogTest
+    [junit] Testsuite: GUI_test.PrivateTipResponseDialogTest
+    [junit] testNoButton
+    [junit] testText
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.329 sec
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.329 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] testNoButton
+    [junit] testText
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testOKButton took 0.304 sec
+    [junit] Testcase: testText took 0.011 sec
+    [junit] Running GUI_test.PrivateTipToDialogTest
+    [junit] Testsuite: GUI_test.PrivateTipToDialogTest
+    [junit] setButton
+    [junit] eraseWindow
+    [junit] testText
+    [junit] disableAll
+    [junit] setOK
+    [junit] Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.425 sec
+    [junit] Tests run: 6, Failures: 0, Errors: 0, Time elapsed: 0.425 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] setButton
+    [junit] eraseWindow
+    [junit] testText
+    [junit] disableAll
+    [junit] setOK
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testSetButton took 0.344 sec
+    [junit] Testcase: testEraseWindow took 0.008 sec
+    [junit] Testcase: testOKButton took 0.019 sec
+    [junit] Testcase: testText took 0.01 sec
+    [junit] Testcase: testDisableAll took 0.006 sec
+    [junit] Testcase: testSetOK took 0.005 sec
+    [junit] Running GUI_test.ReplayGameTest
+    [junit] Testsuite: GUI_test.ReplayGameTest
+    [junit] testNoButton
+    [junit] testYesButton
+    [junit] testText
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.55 sec
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.55 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] testNoButton
+    [junit] testYesButton
+    [junit] testText
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testNoButton took 0.507 sec
+    [junit] Testcase: testYesButton took 0.008 sec
+    [junit] Testcase: testText took 0.009 sec
+    [junit] Running GUI_test.ScreenNameTest
+    [junit] Testsuite: GUI_test.ScreenNameTest
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.86 sec
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.86 sec
+    [junit] 
+    [junit] Testcase: testErrorText took 0.585 sec
+    [junit] Testcase: testValidEntry took 0.03 sec
+    [junit] Testcase: testBack took 0.229 sec
+    [junit] Running GUI_test.ShowCardTest
+    [junit] Testsuite: GUI_test.ShowCardTest
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.283 sec
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.283 sec
+    [junit] 
+    [junit] Testcase: testText took 0.243 sec
+    [junit] Testcase: testOKButton took 0.026 sec
+    [junit] Running GUI_test.SleuthOnMeTest
+    [junit] Testsuite: GUI_test.SleuthOnMeTest
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.352 sec
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.352 sec
+    [junit] 
+    [junit] Testcase: testSelectingAndOK took 0.319 sec
+    [junit] Testcase: testOneCard took 0.007 sec
+    [junit] Testcase: testFromText took 0.01 sec
+    [junit] Running GUI_test.SleuthResultTest
+    [junit] Testsuite: GUI_test.SleuthResultTest
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.186 sec
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.186 sec
+    [junit] 
+    [junit] Testcase: testResults took 0.154 sec
+    [junit] Testcase: testOK took 0.013 sec
+    [junit] Running GUI_test.SleuthTest
+    [junit] Testsuite: GUI_test.SleuthTest
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.357 sec
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.357 sec
+    [junit] 
+    [junit] Testcase: testOKButton took 0.347 sec
+    [junit] Running GUI_test.SnoopDialogTest
+    [junit] Testsuite: GUI_test.SnoopDialogTest
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.192 sec
+    [junit] Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.192 sec
+    [junit] 
+    [junit] Testcase: testTexts took 0.157 sec
+    [junit] Testcase: testButtons took 0.021 sec
+    [junit] Running GUI_test.SnoopOnMeDialogTest
+    [junit] Testsuite: GUI_test.SnoopOnMeDialogTest
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.162 sec
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.162 sec
+    [junit] 
+    [junit] Testcase: testTextAndOK took 0.148 sec
+    [junit] Running GUI_test.SnoopOnPlayerDialogTest
+    [junit] Testsuite: GUI_test.SnoopOnPlayerDialogTest
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.179 sec
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.179 sec
+    [junit] 
+    [junit] Testcase: testPlayers took 0.168 sec
+    [junit] Running GUI_test.SuggestionAndMoveTest
+    [junit] Testsuite: GUI_test.SuggestionAndMoveTest
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.389 sec
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.389 sec
+    [junit] 
+    [junit] Testcase: testResetAndDM took 0.327 sec
+    [junit] Testcase: testSuggestion took 0.023 sec
+    [junit] Testcase: testMove took 0.016 sec
+    [junit] Running GUI_test.SuggestionDialogTest
+    [junit] Testsuite: GUI_test.SuggestionDialogTest
