@@ -14,26 +14,26 @@ import tegakari.*;
 public class RobotSnoopLogicTest extends TestCase{
     RobotSnoopLogic logic;
     Player turn;
-    Player self;
-    Queue<Player> list;
-    Notepad note;
+    Player player;
+    Queue<Player> playerList;
+    Notepad notepad;
     AILevel basic = AILevel.BASIC;
     AILevel smart = AILevel.SMART;
     
-    Hand hand;
-    Hand hand2;
-    Destination dm;
-    Destination dm2;
-    DestinationCard card;
-    DestinationCard card2;
+    Hand humanHand;
+    Hand robotHand;
+    Destination destinationEastern;
+    Destination destinationNorthern;
+    DestinationCard cardEastern;
+    DestinationCard cardNorthern;
     
-    List<Attribute> list1;
-    List<Attribute> list2;
+    List<Attribute> listEastern;
+    List<Attribute> listNorthern;
     
     ActionCard action;
     
-    SuspectCard sCard;
-    VehicleCard vCard;
+    SuspectCard suspectCard;
+    VehicleCard vehicleCard;
     
     List<SuspectCard> suspects;
     List<VehicleCard> vehicles;
@@ -44,44 +44,44 @@ public class RobotSnoopLogicTest extends TestCase{
     public RobotSnoopLogicTest() {
         logic = new RobotSnoopLogic();
         
-        list1 = new ArrayList<>();
-        list2 = new ArrayList<>();
-        list1.add(Attribute.EASTERN);
-        list2.add(Attribute.NORTHERN);
+        listEastern = new ArrayList<>();
+        listNorthern = new ArrayList<>();
+        listEastern.add(Attribute.EASTERN);
+        listNorthern.add(Attribute.NORTHERN);
         
-        Suspect s = new Suspect("hera", list1, "path1");
-        Vehicle v = new Vehicle("card", list2, "path2");
+        Suspect s = new Suspect("hera", listEastern, "path1");
+        Vehicle v = new Vehicle("card", listNorthern, "path2");
         
-        dm = new Destination("dm", list1, "path");
-        dm2 = new Destination("dm2", list2, "path");
-        card = new DestinationCard(dm);
-        card2 = new DestinationCard(dm2);
-        sCard = new SuspectCard(s);
-        vCard = new VehicleCard(v);
-        hand = new Hand();
-        hand.addToHand(card);
+        destinationEastern = new Destination("destinationEastern", listEastern, "path");
+        destinationNorthern = new Destination("destinationNorthern", listNorthern, "path");
+        cardEastern = new DestinationCard(destinationEastern);
+        cardNorthern = new DestinationCard(destinationNorthern);
+        suspectCard = new SuspectCard(s);
+        vehicleCard = new VehicleCard(v);
+        humanHand = new Hand();
+        humanHand.addToHand(cardEastern);
         
-        turn = new HumanPlayer("turn", hand, dm2);
-        hand2 = new Hand();
-        hand2.addToHand(card2);
-        self = new Robot("self", hand2, dm, AILevel.SMART);
+        turn = new HumanPlayer("turn", humanHand, destinationNorthern);
+        robotHand = new Hand();
+        robotHand.addToHand(cardNorthern);
+        player = new Robot("player", robotHand, destinationEastern, AILevel.SMART);
         
         action = new SnoopCard("snoopPath");
         
-        list = new LinkedList<>();
-        list.add(turn);
-        list.add(self);
+        playerList = new LinkedList<>();
+        playerList.add(turn);
+        playerList.add(player);
         
         suspects = new ArrayList<>();
-        suspects.add(sCard);
+        suspects.add(suspectCard);
         vehicles = new ArrayList<>();
-        vehicles.add(vCard);
+        vehicles.add(vehicleCard);
         destinations = new ArrayList<>();
-        destinations.add(card);
-        destinations.add(card2);
+        destinations.add(cardEastern);
+        destinations.add(cardNorthern);
         
-        solution = new Solution(s, v, dm);
-        note = new Notepad(list, suspects, vehicles, destinations, solution);
+        solution = new Solution(s, v, destinationEastern);
+        notepad = new Notepad(list, suspects, vehicles, destinations, solution);
     }
     
     
@@ -89,45 +89,45 @@ public class RobotSnoopLogicTest extends TestCase{
     public void testResponse() {
          List<ClueCard> out;
          
-         out = logic.responseToActionRequest(action, note, turn, self, basic);
+         out = logic.responseToActionRequest(action, notepad, turn, self, basic);
          
          DestinationCard cardOut = (DestinationCard)out.get(0);
          
-         DestinationCard check = card2;
+         DestinationCard check = cardNorthern;
          
          // why are we snooping on turn player?
          // aren't we suppose to snoop on the next player in the list?
          // right now the method snoops on the param turn player
-         assertEquals(cardOut, card);
+         assertEquals(cardOut, cardEastern);
          
-         NoteEntry entry = note.getEntry(card, turn);
+         NoteEntry entry = notepad.getEntry(cardEastern, turn);
          
          assertEquals(NoteEntry.HAS, entry);
          
-         entry = note.getEntry(card, self);
+         entry = notepad.getEntry(cardEastern, player);
          
          assertEquals(NoteEntry.HASNOT, entry);
          
-         ClueCard put = logic.playSnoop((SnoopCard) action, note, turn, (Robot)self, basic);
+         ClueCard put = logic.playSnoop((SnoopCard) action, notepad, turn, (Robot)player, basic);
          
-         assertEquals(card, (DestinationCard) put);
+         assertEquals(cardEastern, (DestinationCard) put);
          
     }
     
     public void testBenefit() {
         SnoopCard snoop = (SnoopCard) action;
-        
-        int out = logic.benefitFromAction(note, action);
+    
+        int out = logic.benefitFromAction(notepad, action);
         
         snoop = new SnoopCard(Direction.LEFT, "thePath");
-        int out2 = logic.benefitFromAction(note, action);
+        int out2 = logic.benefitFromAction(notepad, action);
         
-        note.mark(card, self, NoteEntry.HAS);
-        int out4 = logic.benefitFromAction(note, action);
+        notepad.mark(cardEastern, player, NoteEntry.HAS);
+        int out4 = logic.benefitFromAction(notepad, action);
         
         action = new PrivateTipCard(ClueType.DESTINATION, "path");
         
-        int out3 = logic.benefitFromAction(note, action);
+        int out3 = logic.benefitFromAction(notepad, action);
         
         
         assertEquals(5, out);
